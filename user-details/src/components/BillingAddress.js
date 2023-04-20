@@ -10,8 +10,12 @@ function BillingAddress() {
     function gotoShipping(){
       navigate("/shipping")
     }
+    function gotoReview(){
+        navigate("/review")
+    }
   return (
     <Form>
+        <h1>Billing Details</h1>
       <Row className="mb-3">
         <Form.Group as={Col} controlId="formGridFullName">
           <Form.Label>Full Name</Form.Label>
@@ -20,7 +24,10 @@ function BillingAddress() {
 
         <Form.Group as={Col} controlId="formGridCountry">
           <Form.Label>Country</Form.Label>
-          <Form.Control type="country" placeholder="Country" />
+          <Form.Select defaultValue="Choose...">
+            <option>Choose...</option>
+            <option>...</option>
+          </Form.Select>
         </Form.Group>
       </Row>
 
@@ -56,7 +63,7 @@ function BillingAddress() {
       </Form.Group>
 
       <Button variant="secondary" onClick={gotoShipping}>Back</Button>{' '} 
-      <Button variant="primary">Next</Button>{' '}
+      <Button variant="primary" onClick={gotoReview}>Next</Button>{' '}
       
     </Form>
   );

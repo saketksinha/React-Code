@@ -8,23 +8,27 @@ import { useNavigate } from 'react-router';
 
 function ShippingAddress() {
     const navigate = useNavigate()
-    function gotoCustomer(){
-      navigate("/customer")
+    function gotoBasicDetails(){
+      navigate("/basicdetails")
     }
     function gotoBilling(){
         navigate("/billing")
     }
   return (
     <Form>
+        <h1>Shipping Details</h1>
       <Row className="mb-3">
         <Form.Group as={Col} controlId="formGridFullName">
           <Form.Label>Full Name</Form.Label>
-          <Form.Control type="email" placeholder="Enter your full name" />
+          <Form.Control type="fullname" placeholder="Enter your full name" />
         </Form.Group>
 
         <Form.Group as={Col} controlId="formGridCountry">
           <Form.Label>Country</Form.Label>
-          <Form.Control type="country" placeholder="Country" />
+          <Form.Select defaultValue="Choose...">
+            <option>Choose...</option>
+            <option>...</option>
+          </Form.Select>
         </Form.Group>
       </Row>
 
@@ -59,7 +63,7 @@ function ShippingAddress() {
         <Form.Check type="checkbox" label="My Billing Address is same" />
       </Form.Group>
 
-      <Button variant="secondary" onClick={gotoCustomer}>Back</Button>{' '} 
+      <Button variant="secondary" onClick={gotoBasicDetails}>Back</Button>{' '} 
       <Button variant="primary" onClick={gotoBilling}>Next</Button>{' '}
       
     </Form>

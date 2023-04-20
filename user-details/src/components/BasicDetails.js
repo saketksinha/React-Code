@@ -12,6 +12,7 @@ function Customer() {
   }
   return (
     <Form>
+      <h1>Basic Details</h1>
     <Row className="mb-3">
       <Form.Group as={Col} controlId="formGridFirstName">
         <Form.Label>First Name</Form.Label>
