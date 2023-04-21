@@ -63,8 +63,8 @@ function ShippingAddress() {
         <Form.Check type="checkbox" label="My Billing Address is same" />
       </Form.Group>
 
-      <Button variant="secondary" onClick={gotoBasicDetails}>Back</Button>{' '} 
-      <Button variant="primary" onClick={gotoBilling}>Next</Button>{' '}
+      {/* <Button variant="secondary" onClick={gotoBasicDetails}>Back</Button>{' '} 
+      <Button variant="primary" onClick={gotoBilling}>Next</Button>{' '} */}
       
     </Form>
   );

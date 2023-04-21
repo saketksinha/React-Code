@@ -7,12 +7,14 @@ import Review from './components/Review';
 
 function App() {
   return (
-    <Routes>
-      <Route path='/basicdetails' element={<BasicDetails/>}/>
-      <Route path='/shipping' element={<ShippingAddress/>}/>
-      <Route path='/billing' element={<BillingAddress/>}/>
-      <Route path='/review' element={<Review/>}/>
-    </Routes>
+    <div className="App"></div>
+    
+    // <Routes>
+    //   <Route path='/basicdetails' element={<BasicDetails/>}/>
+    //   <Route path='/shipping' element={<ShippingAddress/>}/>
+    //   <Route path='/billing' element={<BillingAddress/>}/>
+    //   <Route path='/review' element={<Review/>}/>
+    // </Routes>
   );
 }
 

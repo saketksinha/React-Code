@@ -6,13 +6,13 @@ import Row from 'react-bootstrap/Row';
 import { useNavigate } from 'react-router';
 
 function BillingAddress() {
-    const navigate = useNavigate()
-    function gotoShipping(){
-      navigate("/shipping")
-    }
-    function gotoReview(){
-        navigate("/review")
-    }
+    // const navigate = useNavigate()
+    // function gotoShipping(){
+    //   navigate("/shipping")
+    // }
+    // function gotoReview(){
+    //     navigate("/review")
+    // }
   return (
     <Form>
         <h1>Billing Details</h1>
@@ -62,8 +62,8 @@ function BillingAddress() {
         <Form.Check type="checkbox" label="Fill it from my Shipping Address" />
       </Form.Group>
 
-      <Button variant="secondary" onClick={gotoShipping}>Back</Button>{' '} 
-      <Button variant="primary" onClick={gotoReview}>Next</Button>{' '}
+      {/* <Button variant="secondary" onClick={gotoShipping}>Back</Button>{' '} 
+      <Button variant="primary" onClick={gotoReview}>Next</Button>{' '} */}
       
     </Form>
   );
