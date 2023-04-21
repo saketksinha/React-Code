@@ -7,13 +7,14 @@ import { useNavigate } from 'react-router';
 
 
 function ShippingAddress() {
-    const navigate = useNavigate()
-    function gotoBasicDetails(){
-      navigate("/basicdetails")
-    }
-    function gotoBilling(){
-        navigate("/billing")
-    }
+  // const [shippingAddress, setShippingAddress] = useState({
+  //   FullName: "",
+  //   CompleteAddress: "",
+  //   Country:"",
+  //   City: "",
+  //   State: "",
+  //   Zip: "",
+  // });
   return (
     <Form>
         <h1>Shipping Details</h1>
