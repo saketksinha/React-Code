@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 function BasicDetails({formData, setFormData}) {
   return (
     <div className="basic-details-container">

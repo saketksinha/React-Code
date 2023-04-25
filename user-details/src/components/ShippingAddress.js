@@ -1,27 +1,22 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
-import { useNavigate } from 'react-router';
+
 
 
 function ShippingAddress() {
-  // const [shippingAddress, setShippingAddress] = useState({
-  //   FullName: "",
-  //   CompleteAddress: "",
-  //   Country:"",
-  //   City: "",
-  //   State: "",
-  //   Zip: "",
-  // });
+  
+    
   return (
     <Form>
         <h1>Shipping Details</h1>
       <Row className="mb-3">
         <Form.Group as={Col} controlId="formGridFullName">
           <Form.Label>Full Name</Form.Label>
-          <Form.Control type="fullname" placeholder="Enter your full name" />
+          <Form.Control type="text" name = 'name' placeholder="Enter your full name" 
+          //  onChange={handleChange}
+          />
         </Form.Group>
 
         <Form.Group as={Col} controlId="formGridCountry">
@@ -36,7 +31,9 @@ function ShippingAddress() {
     <Row className="mb-3">
       <Form.Group as={Col} controlId="formGridCompleteAddress">
         <Form.Label>Complete Address</Form.Label>
-        <Form.Control placeholder="Address" />
+        <Form.Control placeholder="address" name = 'ShippingAddress' 
+        // onChange={handleChange}
+        />
       </Form.Group>
 
       <Form.Group as={Col} controlId="formGridState">
@@ -51,17 +48,23 @@ function ShippingAddress() {
       <Row className="mb-3">
         <Form.Group as={Col} controlId="formGridCity">
           <Form.Label>City</Form.Label>
-          <Form.Control />
+          <Form.Control name='city' 
+          // onChange={handleChange}
+          />
         </Form.Group>
 
         <Form.Group as={Col} controlId="formGridZip">
           <Form.Label>Zip</Form.Label>
-          <Form.Control />
+          <Form.Control name = 'zip' 
+          // onChange={handleChange}
+          />
         </Form.Group>
       </Row>
 
       <Form.Group className="mb-3" id="formGridCheckbox">
-        <Form.Check type="checkbox" label="My Billing Address is same" />
+        <Form.Check type="checkbox" label="My Billing Address is same" 
+        // onChange={handleCopyAddress}
+        />
       </Form.Group>
 
       {/* <Button variant="secondary" onClick={gotoBasicDetails}>Back</Button>{' '} 

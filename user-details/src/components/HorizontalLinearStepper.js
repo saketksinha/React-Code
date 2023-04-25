@@ -1,9 +1,8 @@
-import * as React from 'react';
+import React, {useState} from 'react';
 import Box from '@mui/material/Box';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
-// import Button from '@mui/material/Button';
 import Button from 'react-bootstrap/esm/Button';
 import Typography from '@mui/material/Typography';
 import BasicDetails from './BasicDetails'
@@ -55,9 +54,7 @@ export default function HorizontalLinearStepper() {
     });
   };
 
-  const handleReset = () => {
-    setActiveStep(0);
-  };
+
 
   return (
     <Box sx={{ width: '100%' }}>
@@ -92,10 +89,10 @@ export default function HorizontalLinearStepper() {
         </React.Fragment>
       ) : (
         <React.Fragment>
-            {activeStep == 0 && <BasicDetails />}
-            {activeStep == 1 && <ShippingAddress />}
-            {activeStep == 2 && <BillingAddress />}
-            {activeStep == 3 && <Review />}
+            {activeStep === 0 && <BasicDetails />}
+            {activeStep === 1 && <ShippingAddress />}
+            {activeStep === 2 && <BillingAddress />}
+            {activeStep === 3 && <Review />}
           {/* <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography> */}
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Button
