@@ -6,6 +6,7 @@ import ShippingDetails from './components/ShippingDetails';
 import {Stepper, StepLabel, Step} from '@mui/material';
 import { multiStepContext } from './StepContext';
 import Review from './components/Review';
+import DisplayData from './components/DisplayData';
 
 function App() {
 
@@ -45,6 +46,8 @@ function App() {
     </Stepper>
     </div>
     {showStep(currentStep)}
+    <br/>
+    {finalData.length > 0 ? <DisplayData /> : ''}
       </header>
     </div>
   );
