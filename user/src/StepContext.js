@@ -30,7 +30,7 @@ const StepContext = () => {
 
   return (
     <div>
-        <multiStepContext.Provider value={{currentStep,setStep,userData,setUserData,setFinalData,finalData,setFinalData, submitData}}>
+        <multiStepContext.Provider value={{currentStep,setStep,userData,setUserData,finalData,setFinalData, submitData}}>
         <App />
         </multiStepContext.Provider>
     </div>

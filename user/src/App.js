@@ -11,6 +11,7 @@ import DisplayData from './components/DisplayData';
 function App() {
 
   const {currentStep, finalData} = useContext(multiStepContext);
+  
 
   function showStep(step){
     switch(step){
@@ -32,16 +33,16 @@ function App() {
       <div className="center-stepper">
     <Stepper style={{width: '18%'}} activeStep={currentStep - 1} orientation="horizontal">
       <Step>
-        <StepLabel></StepLabel>
+        <StepLabel>BasicDetails</StepLabel>
       </Step>
       <Step>
-        <StepLabel></StepLabel>
+        <StepLabel>ShippingDetails</StepLabel>
       </Step>
       <Step>
-        <StepLabel></StepLabel>
+        <StepLabel>BillingDetails</StepLabel>
       </Step>
       <Step>
-        <StepLabel></StepLabel>
+        <StepLabel>Review</StepLabel>
       </Step>
     </Stepper>
     </div>
