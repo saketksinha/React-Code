@@ -1,5 +1,4 @@
 import React, {useContext} from 'react'
-import {Button} from '@mui/material'
 import { multiStepContext } from '../StepContext'
 import { TableContainer, TableHead, TableBody, TableCell, TableRow, Table } from '@mui/material';
 
@@ -7,7 +6,7 @@ import { TableContainer, TableHead, TableBody, TableCell, TableRow, Table } from
 
 
 function DisplayData() {
-    const {setStep, userData, setUserData, finalData} = useContext(multiStepContext);
+    const {finalData} = useContext(multiStepContext);
   return (
     <div>
         <div>
@@ -15,14 +14,14 @@ function DisplayData() {
             <Table border="1" style={{width:'70%', justifyContent:'center'}} size='small' aria-label="caption table">
               <TableHead>
                 <TableRow style={{backgroundColor:'burlywood', color:'aliceblue'}}>
-                  <TableCell>name</TableCell>
-                  <TableCell>email</TableCell>
-                  <TableCell>mobile</TableCell>               
-                  <TableCell>address</TableCell>
-                  <TableCell>city</TableCell>
-                  <TableCell>state</TableCell>
-                  <TableCell>zip</TableCell>
-                  <TableCell>country</TableCell>
+                  <TableCell>Name</TableCell>
+                  <TableCell>Email</TableCell>
+                  <TableCell>Mobile No.</TableCell>               
+                  <TableCell>Address</TableCell>
+                  <TableCell>City</TableCell>
+                  <TableCell>State</TableCell>
+                  <TableCell>Zip</TableCell>
+                  <TableCell>Country</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
