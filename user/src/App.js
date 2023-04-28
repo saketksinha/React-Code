@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <div className="center-stepper">
+      <div>
     <Stepper style={{width: '18%'}} activeStep={currentStep - 1} orientation="horizontal">
       <Step>
         <StepLabel>BasicDetails</StepLabel>

@@ -26,6 +26,7 @@ const StepContext = () => {
       setUserData('');
       setStep(1);
       alert('Form Submitted')
+
     }
 
   return (

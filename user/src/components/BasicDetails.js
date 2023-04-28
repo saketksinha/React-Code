@@ -13,26 +13,25 @@ function BasicDetails() {
         }}
     >
         <div><h1>Basic Details</h1></div>
-        <div>
+        <div className="basic-details-container">
             <TextField label="First name" 
-            margin="normal" variant="outlined" color="secondary"
             value={userData.firstName} 
             onChange={(event) => 
             setUserData({...userData, firstName: event.target.value })} 
              />
         
-            <TextField label="Last name" margin="normal" variant="outlined" color="secondary" 
+            <TextField label="Last name" 
             value={userData.lastName} 
             onChange={(event) => 
             setUserData({...userData, lastName: event.target.value })} />
         </div>
         <div>
-            <TextField label="Email" margin="normal" variant="outlined" color="secondary" 
+            <TextField label="Email"  
             value={userData.email} 
             onChange={(event) => 
             setUserData({...userData, email: event.target.value })} />
         
-            <TextField label="Mobile" margin="normal" variant="outlined" color="secondary" 
+            <TextField label="Mobile"
             value={userData.mobile} 
             onChange={(event) => 
             setUserData({...userData, mobile: event.target.value })} />
