@@ -4,7 +4,6 @@ import Form from './components/Form';
 import {Stepper, StepLabel, Step} from '@mui/material';
 import { multiStepContext } from './StepContext';
 
-
 function App() {
 
   const {currentStep, finalData} = useContext(multiStepContext);
@@ -26,10 +25,8 @@ function App() {
       </Step>
     </Stepper>
     </div>
-      <Form />
-      
+      <Form />      
     </div>
   );
 }
-
 export default App;
