@@ -7,5 +7,4 @@ function ChildComponent(props) {
     </div>
   )
 }
-
 export default ChildComponent
