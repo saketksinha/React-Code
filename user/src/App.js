@@ -28,6 +28,7 @@ function App() {
     <div className="App">
       <header className="App-header">
       <div>
+    
     <Stepper style={{width: '18%'}} activeStep={currentStep - 1} orientation="horizontal">
       <Step>
         <StepLabel>BasicDetails</StepLabel>
@@ -44,10 +45,14 @@ function App() {
     </Stepper>
     </div>
     {showStep(currentStep)}
+
     <br/>
+      
     {finalData.length > 0 ? <DisplayData /> : ''}
       </header>
     </div>
+
+
   );
 }
 
