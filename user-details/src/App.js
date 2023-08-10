@@ -1,17 +1,12 @@
 import './App.css';
 import HorizontalLinearStepper from './components/HorizontalLinearStepper';
 
-
-
 function App() {
   return (
-  
+
     <div className="App">
     <HorizontalLinearStepper/>
-  </div>
-
-    
+  </div>    
   );
 }
-
 export default App;
