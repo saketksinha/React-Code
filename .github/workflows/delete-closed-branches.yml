@@ -1,28 +1,14 @@
-name: Delete Unmerged Branches
+name: delete branch on close pr(api)
+
 on:
-  schedule:
-    - cron: "0 0 * * *"  # Schedule the workflow to run daily
+  pull_request:
+    types: [closed]
 
 jobs:
-  delete-unmerged-branches:
+  delete-branch:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: List unmerged branches
+      - name: REST API with curl
         run: |
-          git remote prune origin
-          git fetch --prune
-          git for-each-ref --format='%(refname:short)' refs/remotes/origin | while read ref; do
-            if ! git merge-base --is-ancestor $ref HEAD; then
-              echo "Unmerged: $ref"
-            fi
-          done > unmerged_branches.txt || true
-
-      - name: Delete unmerged branches
-        run: |
-          while IFS= read -r branch; do
-            branch=$(echo "$branch" | tr -d '\n')
-            git push --delete origin "$branch"
-          done < unmerged_branches.txt
+          curl -s -X DELETE -u username:${{secrets.GITHUB_TOKEN}} https://api.github.com/repos/${{ github.repository }}/git/refs/heads/${{ github.head_ref }}
+        
